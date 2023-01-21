@@ -1,0 +1,86 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: #2f363e;
+}
+#time {
+  display: flex;
+  gap: 40px;
+  color: rgb(192, 228, 237);
+}
+#time .crl {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+#time .crl svg {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  transform: rotate(270deg);
+}
+#time .crl svg circle {
+  height: 100%;
+  width: 100%;
+  fill: transparent;
+  stroke: #0f0e01;
+  stroke-width: 4;
+  transform: translate(5px, 5px);
+}
+#time .crl svg circle:nth-child(2) {
+  stroke: var(--clr);
+  stroke-dasharray: 440;
+}
+#time div {
+  position: absolute;
+  font-weight: 500;
+  text-align: center;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+}
+#time div span {
+  font-size: 1rem;
+  font-weight: 400;
+}
+#time .ap {
+  position: relative;
+  font-size: 1rem;
+  transform: translateX(-20px);
+}
+.datetime {
+  position: relative;
+  transform: translateX(-90px) translateY(170px);
+  color: #746ab0;
+}
+.dots {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+}
+.dots::before {
+  content: "";
+  position: absolute;
+  top: -3px;
+  width: 15px;
+  height: 15px;
+  background: var(--clr);
+  border-radius: 50%;
+  box-shadow: 0 0 20px var(--clr), 0 0 60px var(--clr);
+}
